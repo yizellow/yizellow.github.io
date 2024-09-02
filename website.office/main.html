@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Sidebar</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="sidebar" id="mySidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&#10006;</button>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="content">
+        <button class="open-btn" onclick="toggleSidebar()">&#9776; Menu</button>
+        <h1>Welcome to My Website</h1>
+        <p>Here is some content on the page.</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
