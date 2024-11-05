@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@iconify/vue": "^4.1.2"
   }
 }
