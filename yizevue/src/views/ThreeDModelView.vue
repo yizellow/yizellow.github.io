@@ -1,18 +1,31 @@
 <script setup>
+import { ref } from "vue";
 import { Icon } from "@iconify/vue";
+
+const showIntro = ref(true);
+const canceledIntro = () => {
+  showIntro.value = false;
+};
 </script>
 
 <template>
+  <!-- <div
+    class="text-2xl fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/4 z-12"
+  >
+    INTRO
+  </div> -->
   <div class="-mt-14">
     <section id="1" class="relative">
       <div
+        v-if="showIntro"
         class="backdrop-blur-sm fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2/4 h-auto bg-white/60 p-8 z-10"
       >
         <Icon
           icon="material-symbols:close-rounded"
           width="23"
-          class="justify-self-end m-0"
+          class="justify-self-end m-0 hover:scale-150 transition-transform duration-300"
           id="canceled"
+          @click="canceledIntro"
         />
 
         <h1 class="poppins-medium text-gray-800 text-center text-2xl">
@@ -50,7 +63,7 @@ import { Icon } from "@iconify/vue";
       />
       <img
         src="https://cdna.artstation.com/p/assets/images/images/052/282/402/large/yize-huang-new-whole.jpg?1659416565"
-        class="w-1/4 drop-shadow-md opacity-90 hover:opacity-50 hover:scale-110 transition-transform duration-300scale-110 transition-transform duration-300"
+        class="w-1/4 drop-shadow-md opacity-90 hover:opacity-50 hover:scale-110 transition-transform duration-300"
       />
     </section>
     <section
