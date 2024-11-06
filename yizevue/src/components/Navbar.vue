@@ -1,16 +1,17 @@
-<script setup></script>
-
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
 <template>
   <div>
     <nav
       class="z-50 fixed top-0 left-0 right-0 flex flex-row w-full items-center justify-center h-14 drop-shadow-lg"
     >
-      <img src="../assets/img/logo.png" />
+      <RouterLink to="/"><img src="../assets/img/logo.png" /></RouterLink>
 
-      <div class="navtext">Home</div>
-      <div class="navtext">Project</div>
-      <div class="navtext">About Me</div>
-      <div class="navtext">Contact</div>
+      <RouterLink to="/"><div class="navtext">Home</div></RouterLink>
+      <RouterLink to="/Project"><div class="navtext">Project</div></RouterLink>
+      <RouterLink to="/AboutMe"><div class="navtext">About Me</div></RouterLink>
+      <RouterLink to="/Contact"><div class="navtext">Contact</div></RouterLink>
       <div class="navtext">Member</div>
     </nav>
   </div>
